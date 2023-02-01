@@ -48,9 +48,9 @@ export const UserProvider = (props) => {
   };
 
   const registerUser = (email, password) => {
-    createUserWithEmailAndPassword(email, password)
+    createUserWithEmailAndPassword(auth,email, password)
       .then((result) => setUser(result.user))
-      .catch((error) => setError(error.message));
+      .catch((error) => {console.log(error.message); setError(error.message)});
   };
 
   return (
