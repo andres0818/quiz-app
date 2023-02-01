@@ -1,26 +1,17 @@
-import React from "react";
-import { auth } from "../db";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import React, { useContext, useEffect } from "react";
+import { UserContext } from "../context/UserContext";
 
 const Login = () => {
-  const onLoginGoogle = async () => {
-    /* app
-      .auth()
-      .signInWithPopup(new GoogleAuthProvider())
-      .then((e) => console.log(e)); */
-    try {
-      const result = await signInWithPopup(auth, new GoogleAuthProvider());
-      console.log(result);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const { user, loginGoogle } = useContext(UserContext);
+
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
 
   return (
-<<<<<<< HEAD
     <div className="contenedor">
       <div className="contenedorMobile">
-        <button type="button" onClick={onLoginGoogle}>
+        <button type="button" onClick={loginGoogle}>
           Continuar con Google
         </button>
         <hr />
@@ -41,12 +32,6 @@ const Login = () => {
           <button type="submit">Registrarse</button>
         </form>
         <hr />
-=======
-    <div className='contenedor' >
-      <div className='contenedorMobile'>
-        <h1>hola</h1>
-        <h2>caho</h2>
->>>>>>> 10d0b5417a5629cb3d9bf8b21b15e0ed78a6e593
       </div>
     </div>
   );
