@@ -1,2 +1,30 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor {
+    width: 100vw;
+    height: 100vh;
+    padding: 5% 35%;
+    background-color: rgb(89, 43, 226);
+
+}
+
+@media(max-width: 414px) {
+    .contenedor {
+        width: 0;
+        height: 0;
+        padding: 0;
+    }
+}
+
+
+.contenedorMobile {
+    background: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
