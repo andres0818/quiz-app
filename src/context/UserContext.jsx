@@ -42,13 +42,13 @@ export const UserProvider = (props) => {
 
 
   const loginUser = (email, password) => {
-    signInWithEmailAndPassword(email, password)
+    signInWithEmailAndPassword(auth, email, password)
       .then((result) => setUser(result.user))
       .catch((error) => setError(error.message));
   };
 
   const registerUser = (email, password) => {
-    createUserWithEmailAndPassword(auth,email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((result) => setUser(result.user))
       .catch((error) => {console.log(error.message); setError(error.message)});
   };
