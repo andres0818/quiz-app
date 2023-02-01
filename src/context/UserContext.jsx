@@ -9,6 +9,7 @@ import {
 } from "firebase/auth";
 
 
+
 export const UserContext = createContext();
 
 export const UserProvider = (props) => {
@@ -57,9 +58,11 @@ export const UserProvider = (props) => {
       .catch((error) => { console.log(error.message); setError(error.message) });
   };
 
+
+
   return (
     <UserContext.Provider
-      value={{ user, error, loginGoogle, loginUser, registerUser }}
+      value={{ user, error, loginGoogle, loginUser, registerUser, navigate }}
     >
       {props.children}
     </UserContext.Provider>

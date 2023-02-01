@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../context/UserContext'
 import { mensaje, reloj } from '../icons'
 import '../styles/Estadisticas.scss'
 
 const Estadisticas = () => {
+
+  const { navigate,user } = useContext(UserContext)
+
+  if (user===null) return navigate('/')
+
+
   const tiempo = 1
   const correcto = 20
   const inCorrecto = 20
