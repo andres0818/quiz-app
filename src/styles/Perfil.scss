@@ -1,0 +1,38 @@
+.perfil {
+    color: white;
+    padding: 5%;
+    height: 90%;
+
+    &__contenedor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__foto {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+    }
+
+    &__nombre {
+        font-weight: bold;
+    }
+
+    &__cerrar {
+        color: rgb(222, 81, 81);
+        background-color: transparent;
+        border: none;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 5px;
+        border-radius: 12px;
+        transition: all 0.2s ease;
+
+        &:hover {
+            color: white;
+            background-color: rgb(222, 81, 81);
+        }
+    }
+}

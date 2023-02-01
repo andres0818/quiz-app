@@ -3,6 +3,8 @@ import cerrar from './x.svg'
 import ecg from './ecg.svg'
 import home from './home.svg'
 import perfil from './perfil.svg'
+import reloj from './reloj.svg'
+import mensaje from './mensaje.svg'
 
 
 
@@ -12,5 +14,7 @@ export{
     cerrar,
     ecg,
     home, 
-    perfil
+    perfil,
+    reloj,
+    mensaje
 }

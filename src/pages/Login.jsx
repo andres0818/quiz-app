@@ -17,6 +17,7 @@ const Login = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="contenedor">
       <div className="contenedorMobile">
         <button type="button" onClick={onLoginGoogle}>
@@ -40,6 +41,12 @@ const Login = () => {
           <button type="submit">Registrarse</button>
         </form>
         <hr />
+=======
+    <div className='contenedor' >
+      <div className='contenedorMobile'>
+        <h1>hola</h1>
+        <h2>caho</h2>
+>>>>>>> 10d0b5417a5629cb3d9bf8b21b15e0ed78a6e593
       </div>
     </div>
   );

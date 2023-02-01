@@ -6,7 +6,7 @@ const menu
     = () => {
         return (
             <div className='contenedor' >
-                <div className='contenedorMobile' style={{ background: "white", width: "100%", height: "100%" }}>
+                <div className='contenedorMobile'>
                     <Outlet />
                     <Nav />
                 </div>
