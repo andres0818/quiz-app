@@ -1,0 +1,154 @@
+{
+    "datos":[
+        {
+            "course":"HTML",
+            "sentence":"¿Cómo se inserta un comentario en HTML?",
+            "correct":"<!-- texto -->",
+            "options": ["<p>texto</p>", "<h1>texto</h1>", "<span>texto</span>", "<!-- texto -->"]
+        },
+        {
+            "course":"HTML",
+            "sentence":"¿Cómo se inserta un símbolo de copyright en una página del navegador?",
+            "correct":"&copy",
+            "options": ["&copy", "&copyright", "#copy", "#copyright"]
+        },
+        {
+            "course":"HTML",
+            "sentence":"¿Qué navegadores NO soportan HTML5?",
+            "correct":"explored",
+            "options": ["explored", "Opera", "Safari", "Chrome"]
+        },
+        {
+            "course":"HTML",
+            "sentence":"¿Cómo se crean enlaces?",
+            "correct":"<a></a>",
+            "options": ["<a></a>", "<p></p>", "<br></br>", "<hr></hr>"]
+        },
+        {
+            "course":"HTML",
+            "sentence":"¿Un solo enlace de texto puede apuntar a dos páginas web diferentes?",
+            "correct":"No",
+            "options": ["No", "Si", "Solo al segundo", "Solo al primero"]
+        },
+        {
+            "course":"js",
+            "sentence":"¿Cual NO es un tipos de dato JavaScript?",
+            "correct":"flotante",
+            "options": ["float", "string", "booleano", "null"]
+        },
+        {
+            "course":"js",
+            "sentence":"¿Qué empresa desarrolló JavaScript?",
+            "correct":"Netscape",
+            "options": ["Netscape", "babaria", "colombina", "spaceX"]
+        },
+        {
+            "course":"js",
+            "sentence":"¿A qué hace referencia la palabra clave 'this' en JavaScript?",
+            "correct":"objeto desde donde fue llamado",
+            "options": ["objeto desde donde fue llamado", "salida de funcion", "declaracion de funcion", "esta"]
+        },
+        {
+            "course":"js",
+            "sentence":"¿Qué símbolo se utiliza para los comentarios en Javascript?",
+            "correct":"// texto",
+            "options": ["<a>texto</a>", "{*/texto/*}", "<--!-->", "{*//*texto}"]
+        },
+        {
+            "course":"js",
+            "sentence":"¿Qué es el operador ===?",
+            "correct":"igualdad estricta",
+            "options": ["igualdad estricta", "igualdad simple", "desigualdad", "No existe"]
+        },
+        {
+            "course":"css",
+            "sentence":"¿Dequé manera se declara una clase?",
+            "correct":".className",
+            "options": [".className", "#className", "+className", "-className"]
+        },
+        {
+            "course":"css",
+            "sentence":"¿Dequé manera se declara un id?",
+            "correct":"#idName",
+            "options": ["#idName", ".idName", "+idName", "-idName"]
+        },
+        {
+            "course":"css",
+            "sentence":"¿Con que comando se asigna un color de letra a un componente?",
+            "correct":"color",
+            "options": ["color", "backgroud-color", "opacity", "float"]
+        },
+        {
+            "course":"css",
+            "sentence":"¿Cual es un framework de css?",
+            "correct":"bootstrap",
+            "options": ["bootstrap", "vscode", "react", "mongodb"]
+        },
+        {
+            "course":"css",
+            "sentence":"¿Qué es CSS?",
+            "correct":"hojas de estilo en cascada",
+            "options": ["hojas de estilo en cascada", "clases sobre saturadas", "color style selector", "close short styles"]
+        },
+        {
+            "course":"react",
+            "sentence":"¿Como se crea un hook de estado?",
+            "correct":"useState",
+            "options": ["useState", "state", "stateHook", "hookState"]
+        },
+        {
+            "course":"react",
+            "sentence":"¿Como se crea un contexto?",
+            "correct":"useContext",
+            "options": ["useContext", "createContext", "hookContext", "contextHook"]
+        },
+        {
+            "course":"react",
+            "sentence":"¿Como se crea una funcion flecha?",
+            "correct":"const function = () => {}",
+            "options": ["const function = () => {}", "arrowFunction(){}", "function(){}", "const function => ()"]
+        },
+        {
+            "course":"react",
+            "sentence":"react-router-dom es:",
+            "correct":"una Llibreria",
+            "options": ["una libreria", "una duncion", "una constante", "no existe"]
+        },
+        {
+            "course":"react",
+            "sentence":"¿Como se instalan librerias en react?",
+            "correct":"npm i libreriaName",
+            "options": ["npm i libreriaName", "yarn libreriaName", "install libreriaName", "i libreriaName"]
+        },
+        {
+            "course":"git",
+            "sentence":"¿Como se clona un repositorio?",
+            "correct":"git clone repoName",
+            "options": ["git clone repoName", "git get repoName", "clone repoName", "repoName git clone"]
+        },
+        {
+            "course":"git",
+            "sentence":"¿Qué es Git?",
+            "correct":"herramienta de control de versiones",
+            "options": ["herramienta de control de versiones", "una carpeta", "herramienta de despligue", "una red social"]
+        },
+        {
+            "course":"git",
+            "sentence":"¿Cómo se crea un repositorio en Git?",
+            "correct":"git init",
+            "options": ["git init", "git create", "git clone", "git start"]
+        },
+        {
+            "course":"git",
+            "sentence":"¿Cuál no es un operacion basica de git?",
+            "correct":"extract",
+            "options": ["extract", "Inicializar", "Agregar", "Empujar"]
+        },
+        {
+            "course":"git",
+            "sentence":"¿Cómo diferenciará entre Git y GitHub?",
+            "correct":"GitHub es un servicio de alojamiento de repositorios",
+            "options": ["GitHub es un servicio de alojamiento de repositorios", "son lo mismo", "git no existe", "git es una libreria de github"]
+        }
+    ]
+}
