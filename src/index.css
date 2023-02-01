@@ -13,6 +13,10 @@
 
 }
 
+.menu-item {
+    height: 86.5%;
+}
+
 @media(max-width: 414px) {
     .contenedor {
         width: 0;
