@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../context/UserContext";
 
 const Login = () => {
-  const { user, loginGoogle, loginUser } = useContext(UserContext);
+  const { user, loginGoogle, loginUser, registerUser } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,6 +14,12 @@ const Login = () => {
     e.preventDefault();
     //console.log(email, password);
     loginUser(email, password);
+  };
+
+  const onRegister = (e) => {
+    e.preventDefault();
+    //console.log(email, password);
+    registerUser(email, password);
   };
 
   return (
@@ -40,7 +46,7 @@ const Login = () => {
           />
           <button type="submit">Iniciar Sesion</button>
         </form>
-        <button type="submit">Registrarse</button>
+        <button onClick={onRegister} type="submit">Registrarse</button>
         <hr />
       </div>
     </div>

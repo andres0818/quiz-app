@@ -1,26 +1,9 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import '../styles/Perfil.scss'
 import { UserContext } from '../context/UserContext'
-import { auth } from "../db";
-import { onAuthStateChanged } from "firebase/auth";
 
 
 const Perfil = () => {
-
-  const loginStatus = async () => {
-    try {
-      const user = await new Promise((usuario, error) => {
-        auth.onAuthStateChanged((user) => {
-          user ? usuario(user) : error('No user is logged in');
-        });
-      });
-      console.log(user);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  loginStatus(); 
 
   const { user } = useContext(UserContext)
 

@@ -13,17 +13,33 @@ export const UserContext = createContext();
 
 export const UserProvider = (props) => {
   const [user, setUser] = useState([]);
+  const [error, setError] = useState();
   const navigate = useNavigate();
 
+  const loginStatus = async () => {
+    try {
+      const user = await new Promise(() => {
+        auth.onAuthStateChanged((user) => {
+          setUser(user)
+        });
+      });
+      console.log(user);
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
+  loginStatus();
 
 
-  const [error, setError] = useState("");
 
   const loginGoogle = () => {
     signInWithPopup(auth, new GoogleAuthProvider())
-      .then((result) => setUser(result.user), navigate('/home'))
+      .then(() => navigate('/home'))
       .catch((error) => setError(error.message));
   };
+
+
 
   const loginUser = (email, password) => {
     signInWithEmailAndPassword(email, password)
