@@ -8,33 +8,33 @@ const Estadisticas = () => {
   const inCorrecto = 20
 
   return (
-    <div>
-      <h1>Estadisticas</h1>
-      <select name="" id="">
-        <option value="">Ultimo dia</option>
-        <option value="" selected>Ultimos 7 dias</option>
-        <option value="">Ultimo mes</option>
+    <div className='estadísticas'>
+      <h1 className='estadísticas__titulo'>Estadísticas</h1>
+      <select className='estadísticas__selector' name="" id="">
+        <option className='estadísticas__option' value="">Ultimo dia</option>
+        <option className='estadísticas__option' value="" selected>Ultimos 7 dias</option>
+        <option className='estadísticas__option' value="">Ultimo mes</option>
       </select>
 
-      <div>
-        <img src={reloj} alt="time" />
-        <h2>Tiempo de estudio (horas)</h2>
-        <span>{tiempo}</span>
+      <div className='estadísticas__contenedor'>
+        <img className='estadísticas__icon' src={reloj} alt="time" />
+        <h4 className='estadísticas__info' >Tiempo de estudio (horas)</h4>
+        <h4>{tiempo}</h4>
       </div>
-      <div>
-        <img src={mensaje} alt="time" />
-        <h2>Respuestas contestadas</h2>
-        <span>{correcto + inCorrecto}</span>
+      <div className='estadísticas__contenedor'>
+        <img className='estadísticas__icon' src={mensaje} alt="time" />
+        <h4 className='estadísticas__info' >Respuestas contestadas</h4>
+        <h4>{correcto + inCorrecto}</h4>
       </div>
-      <div>
-        <img src={mensaje} alt="time" />
-        <h2>Respuestas contestadas</h2>
-        <span>{correcto}</span>
+      <div className='estadísticas__contenedor'>
+        <img className='estadísticas__icon' src={mensaje} alt="time" />
+        <h4 className='estadísticas__info' >Respuestas contestadas</h4>
+        <h4 className='estadísticas__correcto'>{correcto}</h4>
       </div>
-      <div>
-        <img src={mensaje} alt="time" />
-        <h2>Respuestas contestadas</h2>
-        <span>{inCorrecto}</span>
+      <div className='estadísticas__contenedor'>
+        <img className='estadísticas__icon' src={mensaje} alt="time" />
+        <h4 className='estadísticas__info' >Respuestas contestadas</h4>
+        <h4 className='estadísticas__incorrecto'>{inCorrecto}</h4>
       </div>
     </div>
   )

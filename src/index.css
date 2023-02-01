@@ -10,19 +10,23 @@
     height: 100vh;
     padding: 5% 35%;
     background-color: rgb(89, 43, 226);
+    font-family: sans-serif;
 
+}
+
+
+.contenedorMobile {
+    background: rgb(23, 24, 28);
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
 }
 
 @media(max-width: 414px) {
     .contenedor {
         padding: 0;
     }
-}
-
-
-.contenedorMobile {
-    background: black;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
+    .contenedorMobile{
+        border-radius: 0;
+    }
 }
