@@ -1,0 +1,29 @@
+.Nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+
+  .nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    gap: 5px;
+
+    .icon {
+      width: 30px;
+    }
+
+    .link-text {
+      color: white;
+    }
+  }
+
+  .nav__link:hover {
+    .icon, .link-text {
+      filter: invert(76%) sepia(43%) saturate(450%) hue-rotate(107deg) brightness(86%) contrast(90%);
+    }
+  }
+}
