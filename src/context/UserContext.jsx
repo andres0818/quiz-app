@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { auth } from "../db";
 import { useNavigate } from "react-router-dom";
 import {
@@ -29,7 +29,11 @@ export const UserProvider = (props) => {
     }
   };
 
-  loginStatus();
+  useEffect(
+    () => {
+      loginStatus();
+    }, []
+  )
 
 
 
@@ -50,7 +54,7 @@ export const UserProvider = (props) => {
   const registerUser = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => setUser(result.user))
-      .catch((error) => {console.log(error.message); setError(error.message)});
+      .catch((error) => { console.log(error.message); setError(error.message) });
   };
 
   return (

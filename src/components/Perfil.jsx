@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import '../styles/Perfil.scss'
 import { UserContext } from '../context/UserContext'
+import { auth } from '../db'
 
 
 const Perfil = () => {
