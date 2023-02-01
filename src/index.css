@@ -1,33 +1,43 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .contenedor {
-    width: 100vw;
-    height: 100vh;
-    padding: 5% 35%;
-    background-color: rgb(89, 43, 226);
-    font-family: sans-serif;
-    color: white;
-
+  width: 100vw;
+  height: 100vh;
+  padding: 5% 35%;
+  background-color: rgb(89, 43, 226);
+  font-family: sans-serif;
+  color: white;
 }
 
+.menu-item {
+  height: 86.5%;
+}
+
+@media (max-width: 414px) {
+  .contenedor {
+    width: 0;
+    height: 0;
+    padding: 0;
+  }
+}
 
 .contenedorMobile {
-    background: rgb(23, 24, 28);
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
+  background: rgb(23, 24, 28);
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
 }
 
 @media(max-width: 414px) {
-    .contenedor {
-        padding: 0;
-    }
-    .contenedorMobile{
-        border-radius: 0;
-    }
+  .contenedor {
+      padding: 0;
+  }
+  .contenedorMobile{
+      border-radius: 0;
+  }
 }

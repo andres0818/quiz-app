@@ -5,7 +5,7 @@ import { ecg, perfil, home } from '../icons';
 
 const Nav = () => {
   return (
-    <nav className='Nav py-2' >
+    <nav className='Nav py-3' >
       <Link className='nav__link' to='/home'>
         <img className='icon' src={home} alt='home' />
         <b className='link-text'>Home</b>
