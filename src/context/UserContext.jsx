@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { auth } from "../db";
+import { auth, db } from "../db";
 import { useNavigate } from "react-router-dom";
 import {
   GoogleAuthProvider,
@@ -7,6 +7,7 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
+import { collection, onSnapshot } from "firebase/firestore";
 
 
 
@@ -15,6 +16,7 @@ export const UserContext = createContext();
 export const UserProvider = (props) => {
   const [user, setUser] = useState([]);
   const [error, setError] = useState();
+  const [dataUser, setDataUser] = useState()
   const navigate = useNavigate();
 
   const loginStatus = async () => {
@@ -30,9 +32,17 @@ export const UserProvider = (props) => {
     }
   };
 
+  const data = () => {
+    onSnapshot(collection(db, "users"), (snapshot) => {
+      setDataUser(snapshot.docs[0].data());
+    });
+  }
+  
+
   useEffect(
     () => {
       loginStatus();
+      data();
     }, []
   )
 
@@ -62,7 +72,7 @@ export const UserProvider = (props) => {
 
   return (
     <UserContext.Provider
-      value={{ user, error, loginGoogle, loginUser, registerUser, navigate }}
+      value={{ user, error,dataUser, loginGoogle, loginUser, registerUser, navigate }}
     >
       {props.children}
     </UserContext.Provider>
