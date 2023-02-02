@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
-import { handleClickEnlace } from "../controllers/handleClick";
-import { getQuestions } from "../services/getQuestionsInfo";
-import "../styles/Home.scss";
+import { useEffect, useState } from 'react';
+import { getQuestions } from '../services/getQuestionsInfo';
+import '../styles/Home.scss';
 import {
   Pregunta,
   CuestionarioInfo,
@@ -9,55 +8,34 @@ import {
   ListaCuestionarios,
   Modal,
   Respuesta,
-} from "./home/index";
+} from './home/index';
 
-const cuestionarios = ["HTML", "css", "js", "react", "git"];
-const respuestas = [
-  {
-    response: "Practica tus conocim.",
-    isTrue: false,
-  },
-  {
-    response: "Practica tus conocimientos en la.",
-    isTrue: true,
-  },
-  {
-    response: "Practica tus conocimientos en.",
-    isTrue: false,
-  },
-  {
-    response: "Practica tus conocimientos en l.",
-    isTrue: false,
-  },
-];
+const cuestionarios = ['HTML', 'css', 'js', 'react', 'git'];
 
 const Home = () => {
-  const [opcion, setOpcion] = useState("");
+  const [opcion, setOpcion] = useState('');
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [course, setCourse] = useState([]);
   const [currentCourse, setCurrentCourse] = useState([]);
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState('');
+
+  const restartCourse = () => {
+    setOpcion('');
+    setCurrentQuestion(0);
+  };
 
   useEffect(() => {
     getQuestions(setCourse);
   }, []);
 
-  const filteredCourses = (opcion) => {
-    setCurrentCourse(course.filter((questions) => questions.course === opcion));
-  };
-  const restartCourse = () => {
-    setOpcion("");
-    setCurrentQuestion(0);
-  };
-
   useEffect(() => {
-    filteredCourses(opcion);
-  }, [opcion]);
+    setCurrentCourse(course.filter((questions) => questions.course === opcion));
+  }, [opcion, course]);
 
   return (
-    <div className="menu-item">
-      {opcion === "" ? (
+    <div className='menu-item'>
+      {opcion === '' ? (
         <ListaCuestionarios>
           {cuestionarios.map((curso, index) => (
             <EnlaceCuestionario
@@ -70,7 +48,7 @@ const Home = () => {
           ))}
         </ListaCuestionarios>
       ) : (
-        <div className="cuestionarios ">
+        <div className='cuestionarios '>
           <CuestionarioInfo
             restartCourse={restartCourse}
             currentQuestion={currentQuestion}
@@ -91,6 +69,7 @@ const Home = () => {
                     }
                     showModal={showModal}
                     setSelected={setSelected}
+                    selected={selected}
                   />
                 )
               )}
