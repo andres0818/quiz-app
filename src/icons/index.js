@@ -5,16 +5,18 @@ import home from './home.svg'
 import perfil from './perfil.svg'
 import reloj from './reloj.svg'
 import mensaje from './mensaje.svg'
+import google from './google.svg'
 
 
 
 
-export{
+export {
     corazon,
     cerrar,
     ecg,
-    home, 
+    home,
     perfil,
     reloj,
-    mensaje
+    mensaje,
+    google
 }
