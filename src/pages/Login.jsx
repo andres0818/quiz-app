@@ -9,10 +9,6 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
-
   const onLogin = (e) => {
     e.preventDefault();
     loginUser(email, password);
