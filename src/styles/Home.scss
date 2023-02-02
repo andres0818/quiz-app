@@ -20,16 +20,17 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100px;
-      height: 100px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
-      border: 10px #dfdfdf solid;
+      border: 7px #dfdfdf solid;
       margin-bottom: 5px;
 
       img {
-        width: 65px;
-        height: 65px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
+        image-orientation: from-image;
       }
     }
 
@@ -55,6 +56,7 @@
     border: 1px solid #fff;
     background-color: #0D1F22;
     border-radius: 5px;
+    cursor: pointer;
 
     .circulo {
       border: 1px solid #fff;
@@ -63,6 +65,14 @@
       cursor: pointer;
       border-radius: 50%;
     }
+
+    .circle-selected {
+      background-color: #71A9F7;
+    }
+  }
+
+  .selected {
+    border-color: #71A9F7;
   }
 
   .correcta {

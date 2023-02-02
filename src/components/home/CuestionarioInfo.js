@@ -3,7 +3,7 @@ import corazon from "../../icons/corazon.svg";
 
 const CuestionarioInfo = ({ vidas, restartCourse, currentQuestion }) => {
   return (
-    <div className="d-flex justify-content-between align-items-center col-12 px-2 pt-2 mb-0">
+    <div className="d-flex justify-content-between align-items-center col-12 px-5 pt-4 pb-2 mb-0">
       <img
         className="col-1"
         src={x}
