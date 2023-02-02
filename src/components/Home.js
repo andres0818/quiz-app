@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { UserContext } from '../context/UserContext';
 import '../styles/Home.scss';
 import Cuestionario from './home/Cuestionario';
 import CuestionarioInfo from './home/CuestionarioInfo';
@@ -28,9 +29,15 @@ const respuestas = [
 ];
 
 
+
 const Home = () => {
   const [opcion, setOpcion] = useState('');
   const [comprobado, setComprobado] = useState(false);
+
+
+  const { navigate,user } = useContext(UserContext)
+
+  if (user===null) return navigate('/')
 
   return (
     <div className='menu-item'>
