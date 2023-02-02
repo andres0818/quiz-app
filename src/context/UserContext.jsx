@@ -9,8 +9,6 @@ import {
 } from "firebase/auth";
 import { collection, onSnapshot } from "firebase/firestore";
 
-
-
 export const UserContext = createContext();
 
 export const UserProvider = (props) => {
@@ -37,7 +35,6 @@ export const UserProvider = (props) => {
       setDataUser(snapshot.docs[0].data());
     });
   }
-  
 
   useEffect(
     () => {
@@ -46,15 +43,11 @@ export const UserProvider = (props) => {
     }, []
   )
 
-
-
   const loginGoogle = () => {
     signInWithPopup(auth, new GoogleAuthProvider())
       .then(() => navigate('/home'))
       .catch((error) => setError(error.message));
   };
-
-
 
   const loginUser = (email, password) => {
     signInWithEmailAndPassword(auth, email, password)
@@ -67,8 +60,6 @@ export const UserProvider = (props) => {
       .then((result) => setUser(result.user))
       .catch((error) => { console.log(error.message); setError(error.message) });
   };
-
-
 
   return (
     <UserContext.Provider
