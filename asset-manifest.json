@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/quiz-app/static/css/main.6f2e6154.css",
+    "main.js": "/quiz-app/static/js/main.ee350e92.js",
+    "static/media/REACT.png": "/quiz-app/static/media/REACT.f6b89d232c9bc9f828e5.png",
+    "static/media/CSS.png": "/quiz-app/static/media/CSS.4e67641bb68b658d9b2b.png",
+    "static/media/JS.png": "/quiz-app/static/media/JS.1306d05e5ee275c5880b.png",
+    "static/media/HTML.png": "/quiz-app/static/media/HTML.68a0575ad03998b35b3d.png",
+    "index.html": "/quiz-app/index.html",
+    "static/media/ecg.svg": "/quiz-app/static/media/ecg.7f552c1ae3f12b91020de09bdd685025.svg",
+    "static/media/google.svg": "/quiz-app/static/media/google.42e3194ec8e0a696f678bbf2d893afeb.svg",
+    "static/media/mensaje.svg": "/quiz-app/static/media/mensaje.1accbe4d13905a23efba203804e315c6.svg",
+    "static/media/corazon.svg": "/quiz-app/static/media/corazon.50ee8f1cf3cc20e36b3e0f97d5dbe4eb.svg",
+    "static/media/reloj.svg": "/quiz-app/static/media/reloj.b25362e5fd739ede09ba5f9b5414260b.svg",
+    "static/media/home.svg": "/quiz-app/static/media/home.da153a0a0d05de8418850d93b2c71706.svg",
+    "static/media/perfil.svg": "/quiz-app/static/media/perfil.ddcff8ae510e7b89db761500563eafb8.svg",
+    "static/media/x.svg": "/quiz-app/static/media/x.717a83f069481a35608e0158084ed05e.svg",
+    "main.6f2e6154.css.map": "/quiz-app/static/css/main.6f2e6154.css.map",
+    "main.ee350e92.js.map": "/quiz-app/static/js/main.ee350e92.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6f2e6154.css",
+    "static/js/main.ee350e92.js"
+  ]
+}
