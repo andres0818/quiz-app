@@ -7,7 +7,7 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
-import { collection, onSnapshot, addDoc } from "firebase/firestore";
+import { collection, onSnapshot, addDoc, serverTimestamp } from "firebase/firestore";
 
 export const UserContext = createContext();
 
@@ -16,33 +16,21 @@ export const UserProvider = (props) => {
   const [error, setError] = useState("");
   const [dataUser, setDataUser] = useState([]);
   const navigate = useNavigate();
+  const [inicioSesion, setInincioSesion] = useState()
 
-  /*  const loginStatus = async () => {
+
+  const loginStatus = async () => {
     try {
       await new Promise(() => {
         auth.onAuthStateChanged((log) => {
-          setUser(log);
-          if (!dataUser.find((e) => e.email === user.email)) {
-            addDoc(collection(db, "users"), {
-              email: user.email,
-              name: user.displayName,
-              profilPic: user.photoURL,
-              stats: {
-                answers: 0,
-                badAnswers: 0,
-                goodAnswers: 0,
-                studyTime: 0,
-              },
-            });
-          }
-          data();
+          setInincioSesion(log);
         });
       });
       console.log(user);
     } catch (error) {
       setError(error.message);
     }
-  }; */
+  };
 
   const data = () => {
     onSnapshot(collection(db, "users"), (snapshot) => {
@@ -51,8 +39,9 @@ export const UserProvider = (props) => {
   };
 
   useEffect(() => {
+    loginStatus()
     data();
-  }, [dataUser]);
+  }, []);
 
   const loginGoogle = () => {
     signInWithPopup(auth, new GoogleAuthProvider())
@@ -67,7 +56,7 @@ export const UserProvider = (props) => {
               answers: 0,
               badAnswers: 0,
               goodAnswers: 0,
-              studyTime: 0,
+              studyTime: serverTimestamp(),
             },
           });
         }
@@ -90,7 +79,7 @@ export const UserProvider = (props) => {
               answers: 0,
               badAnswers: 0,
               goodAnswers: 0,
-              studyTime: 0,
+              studyTime: serverTimestamp(),
             },
           });
         }
@@ -115,6 +104,7 @@ export const UserProvider = (props) => {
         user,
         error,
         dataUser,
+        inicioSesion,
         loginGoogle,
         loginUser,
         registerUser,
