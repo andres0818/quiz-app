@@ -1,19 +1,34 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../context/UserContext";
 import { mensaje, reloj } from "../icons";
 import "../styles/Estadisticas.scss";
 
 const Estadisticas = () => {
-  //const [timeStudy, setTimeStudy] = useState()
 
-  const { dataUser, navigate, user } = useContext(UserContext);
+  const { dataUser, navigate, inicioSesion } = useContext(UserContext);
+  const [arrayUser, setArrayUser] = useState()
 
-  if (user === null) return navigate("/");
+  const newData = () => {
+    const data = dataUser.filter(usuario => usuario.email === inicioSesion.email)
+    data.map(user => setArrayUser(user))
 
-  if (dataUser.length > 0) {
-    const seconds = dataUser[0].stats.study_time.seconds;
+
+
+  }
+
+  useEffect(
+    () => {
+      newData()
+
+    }
+    , []
+  )
+
+  if (inicioSesion === null) return navigate("/");
+
+  if (arrayUser) {
+    const seconds = arrayUser.stats.studyTime.seconds === 0 ? 0 : arrayUser.stats.studyTime.seconds;
     const date = new Date(seconds * 1000);
-
     const calcTimeDifference = (dateString) => {
       const currentDate = new Date();
       const difference = currentDate - dateString;
@@ -26,8 +41,9 @@ const Estadisticas = () => {
     };
 
     const tiempo = calcTimeDifference(date);
-    const correcto = dataUser[0].stats.bad_answers;
-    const inCorrecto = dataUser[0].stats.good_answers;
+    const correcto = arrayUser.stats.badAnswers;
+    const inCorrecto = arrayUser.stats.goodAnswers;
+
 
     return (
       <div className="estadísticas">
