@@ -46,7 +46,7 @@ export const UserProvider = (props) => {
 
   const data = () => {
     onSnapshot(collection(db, "users"), (snapshot) => {
-      setDataUser(snapshot.docs.map((doc) => doc.data()));
+      setDataUser(snapshot.docs.map((doc) => {return {...doc.data(),id: doc.id}}));
     });
   };
 
