@@ -1,15 +1,15 @@
-import Pregunta from "./Pregunta";
-import CuestionarioInfo from "./CuestionarioInfo";
-import EnlaceCuestionario from "./EnlaceCuestionario";
-import ListaCuestionarios from "./ListaCuestionarios";
-import Modal from "./Modal";
-import Respuesta from "./Respuesta";
+import Question from './Question';
+import QuestionnaireInfo from './QuestionnaireInfo';
+import QuestionnaireLink from './QuestionnaireLink';
+import QuestionnaireList from './QuestionnaireList';
+import Modal from './Modal';
+import Response from './Response';
 
 export {
-  Pregunta,
-  CuestionarioInfo,
-  EnlaceCuestionario,
-  ListaCuestionarios,
+  Question,
+  QuestionnaireInfo,
+  QuestionnaireLink,
+  QuestionnaireList,
   Modal,
-  Respuesta,
+  Response,
 };

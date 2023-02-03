@@ -1,5 +1,3 @@
-import React from "react";
-
 const Modal = ({
   show,
   currentQuestion,
@@ -10,10 +8,10 @@ const Modal = ({
   return (
     <div
       className={`modal-cuestionario d-flex flex-column justify-content-center 
-      ${show ? "" : "d-none"}`}
+      ${show ? '' : 'd-none'}`}
     >
       <button
-        className="btn p-2 m-5"
+        className='btn p-2 m-5'
         onClick={() => {
           currentQuestion < 4 && setCurrentQuestion(currentQuestion + 1);
           currentQuestion === 4 && restartCourse();

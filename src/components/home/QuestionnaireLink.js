@@ -4,7 +4,7 @@ import JS from '../../imgs/JS.png';
 import REACT from '../../imgs/REACT.png';
 import GIT from '../../imgs/GIT.png';
 
-const EnlaceCuestionario = ({ name, setOpcion }) => {
+const QuestionnaireLink = ({ name, setOption }) => {
   const imgs = {
     HTML: HTML,
     CSS: CSS,
@@ -17,7 +17,7 @@ const EnlaceCuestionario = ({ name, setOpcion }) => {
     <div className='cuestionario col-6'>
       <figure
         onClick={() => {
-          setOpcion();
+          setOption();
         }}
       >
         <img src={imgs[name.toUpperCase()]} alt={`Cuestionario de ${name}`} />
@@ -27,4 +27,4 @@ const EnlaceCuestionario = ({ name, setOpcion }) => {
   );
 };
 
-export default EnlaceCuestionario;
+export default QuestionnaireLink;
