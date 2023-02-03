@@ -61,7 +61,7 @@ export const UserProvider = (props) => {
           });
         }
         data();
-        navigate("/home");
+        navigate("/quiz-app/home");
       })
       .catch((error) => setError(error.message));
   };
@@ -84,7 +84,7 @@ export const UserProvider = (props) => {
           });
         }
         data();
-        navigate("/home");
+        navigate("/quiz-app/home");
       })
       .catch((error) => setError(error.message));
   };
