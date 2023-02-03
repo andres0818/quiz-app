@@ -9,12 +9,13 @@ import Home from './components/Home'
 const App = () => {
   return (
     <Routes>
-      <Route path='/' element={<Login />} />
+      <Route path='/quiz-app' element={<Login />} />
       <Route path='/home' element={<Menu />} >
         <Route path='/home' element={<Home />} />
         <Route path='/home/estadisticas' element={<Estadisticas />} />
         <Route path='/home/perfil' element={<Perfil />} />
       </Route>
+      <Route path='*' element={<Login />} />
     </Routes>
   );
 };
