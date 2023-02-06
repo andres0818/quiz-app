@@ -34,7 +34,7 @@ export const UserProvider = (props) => {
 
   const data = () => {
     onSnapshot(collection(db, "users"), (snapshot) => {
-      setDataUser(snapshot.docs.map((doc) => {return {...doc.data(),id: doc.id}}));
+      setDataUser(snapshot.docs.map((doc) => { return { ...doc.data(), id: doc.id } }));
     });
   };
 
@@ -46,6 +46,7 @@ export const UserProvider = (props) => {
   const loginGoogle = () => {
     signInWithPopup(auth, new GoogleAuthProvider())
       .then((result) => {
+        navigate("/quiz-app/home");
         setUser(result.user);
         if (!dataUser.find((e) => e.email === result.user.email)) {
           addDoc(collection(db, "users"), {
@@ -61,7 +62,6 @@ export const UserProvider = (props) => {
           });
         }
         data();
-        navigate("/quiz-app/home");
       })
       .catch((error) => setError(error.message));
   };
@@ -69,6 +69,7 @@ export const UserProvider = (props) => {
   const loginUser = (email, password) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
+        navigate("/quiz-app/home");
         setUser(result.user);
         if (!dataUser.find((e) => e.email === result.user.email)) {
           addDoc(collection(db, "users"), {
@@ -84,7 +85,6 @@ export const UserProvider = (props) => {
           });
         }
         data();
-        navigate("/quiz-app/home");
       })
       .catch((error) => setError(error.message));
   };
