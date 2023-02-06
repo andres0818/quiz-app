@@ -17,7 +17,9 @@ const Perfil = () => {
 
 
   const cerrarSesión = () => {
-    signOut(auth)
+    signOut(auth).then((resp) => {
+      navigate('/quiz-app')
+    })
   }
 
   return (

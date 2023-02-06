@@ -46,7 +46,6 @@ export const UserProvider = (props) => {
   const loginGoogle = () => {
     signInWithPopup(auth, new GoogleAuthProvider())
       .then((result) => {
-        navigate("/quiz-app/home");
         setUser(result.user);
         if (!dataUser.find((e) => e.email === result.user.email)) {
           addDoc(collection(db, "users"), {
@@ -61,6 +60,7 @@ export const UserProvider = (props) => {
             },
           });
         }
+        navigate("/quiz-app/home");
         data();
       })
       .catch((error) => setError(error.message));

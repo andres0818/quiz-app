@@ -12,9 +12,8 @@ const Estadisticas = () => {
     const data = dataUser.filter(usuario => usuario.email === inicioSesion.email)
     data.map(user => setArrayUser(user))
 
-
-
   }
+
 
   useEffect(
     () => {
@@ -26,8 +25,11 @@ const Estadisticas = () => {
 
   if (inicioSesion === null) return navigate("/");
 
+  
+
   if (arrayUser) {
-    const seconds = arrayUser.stats.studyTime.seconds === 0 ? 0 : arrayUser.stats.studyTime.seconds;
+
+    const seconds = arrayUser === 0 ? 0 : arrayUser.stats.studyTime.seconds;
     const date = new Date(seconds * 1000);
     const calcTimeDifference = (dateString) => {
       const currentDate = new Date();
