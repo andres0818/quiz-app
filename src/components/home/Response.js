@@ -1,4 +1,4 @@
-const Respuesta = ({ text, isTrue, showModal, setSelected, selected }) => {
+const Response = ({ text, isTrue, showModal, setSelected, selected }) => {
   return (
     <div
       className={`respuesta d-flex justify-content-between align-items-center my-2 px-2 py-0 
@@ -15,4 +15,4 @@ const Respuesta = ({ text, isTrue, showModal, setSelected, selected }) => {
   );
 };
 
-export default Respuesta;
+export default Response;
